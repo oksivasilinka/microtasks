@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
-import {NewComponent, TopCars} from "./site/NewComponent";
+import {TopCars} from "./site/NewComponent";
+// import {NewComponent, TopCars} from "./site/NewComponent";
 
 function App() {
     // const [students, setStudents] = useState([
@@ -23,6 +24,12 @@ function App() {
 
     // вывести список и пронумеровать, вывести таблицей
     const [topCars, setTopCars] = useState([
+        {manufacturer:'BMW', model:'m5cs'},
+        {manufacturer:'Mercedes', model:'e63s'},
+        {manufacturer:'Audi', model:'rs6'},
+        {manufacturer:'BMW', model:'m5cs'},
+        {manufacturer:'Mercedes', model:'e63s'},
+        {manufacturer:'Audi', model:'rs6'},
         {manufacturer:'BMW', model:'m5cs'},
         {manufacturer:'Mercedes', model:'e63s'},
         {manufacturer:'Audi', model:'rs6'}

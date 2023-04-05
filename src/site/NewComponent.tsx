@@ -44,7 +44,7 @@ export const TopCars = (props: NewTopCarsType) => {
             {props.topCars.map((objectFromTopCarsArray, index) => {
                 return (
                     <tr>
-                        <td></td>
+                        <td> {index + 1}</td>
                         <td>{objectFromTopCarsArray.manufacturer}</td>
                         <td>{objectFromTopCarsArray.model}</td>
                     </tr>
