@@ -1,44 +1,57 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import {TopCars} from "./site/NewComponent";
-// import {NewComponent, TopCars} from "./site/NewComponent";
+import {Button} from "./Components/Button";
 
 function App() {
-    // const [students, setStudents] = useState([
-    //     {id: 1, name: "James", age: 8},
-    //     {id: 2, name: "Robert", age: 18},
-    //     {id: 3, name: "John", age: 28},
-    //     {id: 4, name: "Michael", age: 38},
-    //     {id: 5, name: "William", age: 48},
-    //     {id: 6, name: "David", age: 58},
-    //     {id: 7, name: "Richard", age: 68},
-    //     {id: 8, name: "Joseph", age: 78},
-    //     {id: 9, name: "Thomas", age: 88},
-    //     {id: 10, name: "Charles", age: 98},
-    //     {id: 11, name: "Christopher", age: 100},
-    // ])
+
+    const Button1Foo = (subscriber: string, age: number, address: string) => {
+        console.log(subscriber, age, address)
+    }
+
+    const Button2Foo = (subscriber: string, age: number) => {
+        console.log(subscriber, age)
+    }
+
+    const Button3Foo = () => {
+        console.log("I'm stupid button")
+    }
+
+    // const myFirstSubscriber = () => {
+    //     console.log("Hello I'm Vasya!")
+    // }
     //
-    // return (
-    //     <NewComponent students={students}/>
-    // )
+    // const mySecondSubscriber = () => {
+    //     console.log("Hello, I'm Ivan!")
+    // }
 
-    // вывести список и пронумеровать, вывести таблицей
-    const [topCars, setTopCars] = useState([
-        {manufacturer:'BMW', model:'m5cs'},
-        {manufacturer:'Mercedes', model:'e63s'},
-        {manufacturer:'Audi', model:'rs6'},
-        {manufacturer:'BMW', model:'m5cs'},
-        {manufacturer:'Mercedes', model:'e63s'},
-        {manufacturer:'Audi', model:'rs6'},
-        {manufacturer:'BMW', model:'m5cs'},
-        {manufacturer:'Mercedes', model:'e63s'},
-        {manufacturer:'Audi', model:'rs6'}
-    ])
+    // const onClickHandler=(name: string) => {
+    //     console.log("Hello, " + name)
+    // }
 
-    return <TopCars topCars={topCars}/>
+    // const foo1 = () => {
+    //     //ничего не передавать, но в консоли 100200
+    //     console.log(100200)
+    // }
+    //
+    // const foo2=(num: number) => {
+    //     //передать цифру 100200
+    //     console.log(num)
+    // }
+    return (
 
+        <div className={"App"}>
+            {/*<button onClick={(event) => {console.log("Hello!")}}> MyYouTubeChanel-1</button>*/}
+            {/*<button onClick={()=>onClickHandler("Vasya")}> MyYouTubeChanel-2</button>*/}
+            {/*<button onClick={()=>onClickHandler("Ivan")}> MyYouTubeChanel-3</button>*/}
+            {/*<button onClick={foo1}>1</button>*/}
+            {/*<button onClick={()=>foo2(100200)}>2</button>*/}
 
+            <Button name={"MyYouTubeChanel-1"} callBack={() => Button1Foo("i'm Vasya", 21, "live in Minsk")}/>
+            <Button name={"MyYouTubeChanel-2"} callBack={() => Button2Foo("i'm Ivan", 23)}/>
+            <Button name={"MyYouTubeChanel-3"} callBack={Button3Foo}/>
 
+        </div>
+    )
 }
 
 export default App;
