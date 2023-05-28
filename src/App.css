@@ -1,11 +1,24 @@
 .App {
   padding: 30px;
-  width: 250px;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 .App > div {
   margin-right: 50px;
+}
+
+.error {
+  border: red 1px solid;
+}
+
+.error-message {
+  color: red;
+}
+
+.active-filter {
+  background-color: aquamarine;
+}
+
+.is-done {
+  opacity: 0.5;
 }
